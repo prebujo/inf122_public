@@ -1,0 +1,48 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11300\viewh13720\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs26 \cf0 A. \
+1. fra boken: 10.4\
+\
+Endre programmet fra punkt 1 slik at  \
+2. man ikke oppgir antall tall i f\'f8rste linjen, men bare tallene, som avsluttes med 0 - da skal programmet vise summen av alle oppgitte tall.\
+3. Deretter, endre programmet slik at man skriver alle tall i en linje - i det man trykker CR (dvs. Enter knappen), skal programmet vise summen av tallene.\
+\
+\
+B. Programmer en funksjon vis :: Int -> IO (), som viser en N x N matrise, der N er inputtallet. \'d8verste rad i matrisen skal vise kolonnenummer, f\'f8rste (eller siste) kolonne skal vise radnummer, mens hver posision inne i matrisen skal ha et punktum, f.eks., f 3 skal gi \
+  1 2  3                         1 2  3\
+1 .  .  .             eller       .  .  .  1\
+2 .  .  .                           .  .  .  2\
+3 .  .  .                           .  .  .  3\
+\
+Tallene i f\'f8rste rad m\'e5 ha minst en blank, \'93 \'93, imellom, mens alle punktene i matrisen skal ha like avstander til sine naboer. Du m\'e5\'a0alts\'e5 s\'f8rge for \'e5 tilpasse dette dersom matrisen har mer enn 9 rader/kolonner. Du kan anta at den aldri har mer enn 99 rader/kolonner.\
+\
+\
+C. Utvid oppgave B slik at n\'e5 kan man gi kommandoer \'93til matrisen\'94 (nrR er antallet rader/kolonner)\
+   n x y - der  1 <= x,y <= nrR \
+           - resultatet skal v\'e6re at \'93.\'94  i posisjonen (x,y) byttes med \'93X\'94 (eller \'93X\'94 forblir \'93X\'94).\
+   d x y - der  1 <= x,y <= nrR \
+           - \'93X\'94 i posisjonen (x,y) byttes med \'93.\'94 (eller \'93.\'94 forblir \'93.\'94)\
+   q - avslutter programmet\
+Dersom oppgitte tall ligger utenfor matrisen, skal programmet\'a0fortsette. Du velger selv om bruker f\'e5r en tilbakemelding, men s\'f8rg for at programmet ikke terminerer f\'f8r kommando \'93q\'94.\
+\
+\
+D. Utvid oppgave C med to kommandoer:\
+    w navn - skriver matrisen (dens st\'f8rrelse, samt alle felter med X) til en fil med navn \'93navn\'94\
+    r navn - leser matrisen fra filen \'93navn\'94.\
+\
+\
+E. Utvid funksjonen play :: Board -> Int -> IO (), fra \'93Game of nim\'94 i boken, s.132, slik at \
+ 1. hver kommando best\'e5r av to tall \'97 ikke kun enkle siffer \'97 skrevet i en linje, radnummer etterfulgt av antall stjerner som skal fjernes; \
+    (dette krever spesielt at man l\'f8ser f\'f8rst oppgave 10.2)\
+og deretter slik at \
+2. dersom det f\'f8rste tallet er 0, s\'e5 utf\'f8res operasjon \'93Tilbake\'94, dvs. spillet trekkes et trekk tilbake. \
+    Dette kan gjentas helt til man kommer tilbake til spillets start.\
+\
+\
+F. For spesialinteresserte.\
+Utvid nim spillet slik at man kan spille mot datamaskin. I f\'f8rste omgang, start med noen triviell strategi og bare s\'f8rg for grensesnittet og riktig fremvisning av maskinens trekk. Deretter kan du fordype deg i mulige, og optimale, strategier for nim og implementere en slik.\
+}

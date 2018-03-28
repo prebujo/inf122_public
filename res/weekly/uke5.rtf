@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs26 \cf0 A. fra boken \
+7.7 (\'93binary string transmitter\'94 skal tolkes som omregning mellom desimaltall og listerepresentasjon av bin\'e6re tall, f.eks., mellom 6 og [0,0,0,0,0,1,1,0], der 8-bits bin\'e6rt tall skal n\'e5 f\'e5 en ekstra paritetsbit.)\
+\
+B fra boken \
+8.5\
+8.6\
+\
+C. Definer \
+	datatype Exp = S  |  U  |  Og Exp Exp  |  El Exp Exp | Ik Exp\
+\
+(a) F\'f8lg oppskriften fra oppgave B for \'e5 definere en fuksjon \
+	folde :: a -> a -> (a -> a -> a) -> (a -> a -> a) -> (a -> a) -> Exp -> a\
+slik at \
+	folde s u o e i exp\
+erstatter Exp-konstruktorer i exp med applikasjon av tilsvarende funksjoner (S med s, U med u - disse to er konstantfunksjoner uten noen argumenter; Og med o, El med e, Ik med i).\
+\
+Hver av definisjonene (b), (c), (d) under skal best\'e5 av et enkelt kall til folde med passende argumenter.\
+\
+(b) Bruk folde til \'e5\'a0programmere \
+	evb :: Exp -> Bool\
+som returnerer verdien av inpututtrykk tolket som boolsk uttrykk (S for sant og U for usant) i prefiksnotasjon,  f.eks.\
+	evb Og S U = False\
+	evb Og (Ik (Og S U)) S = True\
+	evb Og (Og S S) S = True\
+	evb El (Og U S) U = False\
+\
+(c) Bruk folde til \'e5\'a0programmere \
+	evi :: Exp -> Int\
+som regner ut verdien til inpututtrykket betraktet n\'e5\'a0som Int uttrykk i prefiksnotasjon, der S tilsvarer 1, U 5, mens Og er +, El er * og Ik un\'e6r -, f.eks.\
+	evi (Og S U)  = 6\
+	evi (Og (Ik (Og S U)) S)  = -5\
+	evi (Og (Og S S) S)  = 3\
+	evi (El (Og U S) U)  = 30\
+\
+(d) Bruk folde til \'e5\'a0programmere \
+	evh :: Exp -> Int\
+som returnerer h\'f8yden av treet tilsvarende uttrykket, der h\'f8yden av S og U er 1, Ik x har h\'f8yden likt 1 + h\'f8yden av x, mens Og og El har h\'f8yden av det h\'f8yeste subtre + 1.\
+F.eks.\
+	evh (Og S U)  = 2\
+	evh (Og (Ik (Og S U)) S)  = 4\
+	evh (Og (Og S S) S)  = 3\
+	evh (El (Og U S) U)  = 3\
+\
+D. Ordbok - assosieringslister  (p\'e5 egen fil)\
+}

@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14340\viewh24860\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs34 \cf0 Oppgavene A - C skal l\'f8ses ved \'e5\'a0bruke listekomprehensjon.\
+\'97\'97\'97\'97\'97\'97\'97\'97 \
+\
+A. Programmer en funksjon sub :: Int -> Int -> [a] -> [a]\
+      slik at sub a b xs returnerer sublisten av xs fom. posisjon a tom posisjon b-1 (vi antar at 0 <= a < b <= length xs).\
+      F.eks., \
+     sub 2 4 \'93abcde\'94 == \'93cd\'94\
+     sub 3 3 [1,2,3] == [3]\
+\
+B. Programmer funksjon fjern :: String -> Char -> String\
+som fjerner alle forekomster av tegnet i andre argumentet fra strengen i f\'f8rste argumentet. F.eks.:\
+> fjern \'93ab cd ef\'94 \'91 \'91 \
+\'93abcdef\'94\
+> fjern \'93ab cd cf\'94 \'91c\'92\
+\'93ab d f\'94\
+\
+Programmer s\'e5 den samme funksjonen p\'e5 en annen m\'e5te (uten listekomprehensjon)\
+\
+C. Programmer en funksjon tegnpos :: Char -> String -> [Int]\
+som returnerer liste med alle posisjonene i inputstrenger der input tegnet forekommer, f.eks. \
+	tegnpos \'91n\'92 \'93Tannenberg 1410\'94 = [2,3,5]\
+	tegnpos \'911\'92 \'93Tannenberg 1410\'94 = [11,13]\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97 \
+Oppgavene D - F skal programmeres rekursivt. \
+Hvis mulig pr\'f8v \'e5\'a0f\'e5 til en enkel hale-rekursiv implementasjon.\
+\'97\'97\'97\'97\'97\'97\'97\'97 \
+\
+D. fra boken:\
+6.4\
+6.6\
+\
+E. Programmer en funksjon clean :: String -> String, som fjerner alle ikke-bokstaver fra input strengen og\
+bytter ut alle bokstaver fra store til sm\'c2, f.eks.:\
+	clean \'93Dette ER en 7*$ test!!!  \'93 == \'93detteerentest\'94\
+Du kan f\'e5 bruk for funksjoner isAlpha og toLower, s\'e5 skriv\
+	import Data.Char (isAlpha, toLower)\
+\'f8verst i programmet ditt.\
+\
+F. Programmer en funksjon tokenize :: String -> String -> String -> [String]. \
+Et kall \
+> tokenize str imp rem\
+skal dele opp strengen str i en liste av strenger, der \
+- hvert tegn som forekommer i strengen imp skal st\'e5 som egen streng, \
+- hvert tegn som forekommer i strengen rem skal fjernes, og \
+- andre delstrenger av str (mellom tegn fra imp ++ rem) skal forekomme som egne strenger.\
+Man antar at ingen tegn forekommer p\'e5 begge argumentlister imp og rem.\
+F.eks.:\
+> tokenize \'93a + b* 12-def\'94   \'93+-*\'94   \'93 \'93 (den siste er en streng med enkelt blank) skal gi \
+[\'93a\'94, \'94+\'94, \'94b\'94, \'94*\'94, \'9412\'94, \'93-\'93, \'93def\'94]\
+mens \
+> tokenize \'93a + b* 12-def\'94   \'93+*\'94   \'93 \'93 (den siste er en streng med enkelt blank) skal gi \
+[\'93a\'94, \'94+\'94, \'94b\'94, \'94*\'94, \'9412-def\'94]\
+\
+}

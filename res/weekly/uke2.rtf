@@ -1,0 +1,76 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 0. boken 3.1-5 \
+(L\'f8sninger til 3.1 og 3.2 finnes i boken og gjennomg\'e5s ikke p\'e5 gruppen.)\
+\
+\
+1. Angi typer til f\'f8lgende uttrykk (dvs. fyll ut for ?). Gi ogs\'e5 n\'f8dvendige klasserestriksjoner der de trenges. \
+\
+False :: ?\
+\
+5 + 8 :: ?\
+\
+(+) 2 :: ?\
+\
+(+2) :: ?\
+\
+(2+) :: ?\
+\
+(["foo", "bar"], 'a')  :: ?\
+\
+[(True, []), (False, [['a']])]  :: ?\
+\
+\\x y ->  y !! x  :: ? \
+\
+[ take, drop, \\x y ->  [ y !! x ] ] :: ?\
+\
+\
+2. Fyll utt for ? - dvs., angi typer til f\'f8lgende uttrykk og en mulig definisjon for e7.\
+Gi ogs\'e5 n\'f8dvendige klasserestriksjoner der de trenges. \
+\
+e1 :: ?\
+e1 = [False, True, False]\
+\
+e2 :: ?\
+e2 = [[1,2],[3,4]]\
+\
+e3 :: ?\
+e3 = [ (\'93a\'94,7) ] \
+\
+e4 :: ?\
+e4 = [ (\'91a\'92,7) ]\
+\
+e5 :: ?\
+e5 x = x * 2\
+\
+e6 :: ?\
+e6 (x,y) = x\
+\
+e7 :: a -> (a,a)\
+e7 ? = ? \
+\
+3. Hvilke \'93forventede\'94 funksjoner kan ha f\'f8lgende typer:\
+\
+[a] -> a\
+\
+[a] -> Int\
+\
+\
+4. Angi typen til enhver foo og bestem om de er ekvivlaente:\
+\
+foo1 a b = (a, b)\
+foo2 a = \\b -> (a, b)\
+foo3 = \\a b -> (a, b)\
+foo4 = \\a -> \\b -> (a, b)\
+\
+\
+5. Programmer to funksjoner \
+	 f :: Int -> Int -> Int    og\
+	g :: (Int, Int) -> Int\
+som er slike at for alle x :: Int, y :: Int, har vi: f x y == g(x,y).\
+\
+}
